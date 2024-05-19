@@ -18,7 +18,7 @@ async function welcome() {
 
   await sleep();
   rainbowTitle.stop();
-//step 2 how to play
+  //step 2 how to play
   console.log(`
     ${chalk.bgBlue('HOW TO PLAY')} 
     I am a process on your computer.
@@ -55,7 +55,7 @@ async function game() {
     });
 
   return handleAnswer(answers.userGuessNumber === randomNumber);
-  
+
 }
 await game();
 //5  check
@@ -74,29 +74,29 @@ async function handleAnswer(isCorrect:any) {
     spinner.error({ text: ` Game over, you lose ${playerName}!` });
     // process.exit(1);
   
-  //   let con = await inquirer.prompt({
-  //     name: "continue",
-  //     type: "confirm",
-  //     message: "Do you wnat to continue",
-  //     default: "false",
-  //   });
-  //   condition = con.continue;
-  //   console.log(condition);
+    let con = await inquirer.prompt({
+      name: "continue",
+      type: "confirm",
+      message: "Do you wnat to continue",
+      default: "false",
+    });
+    condition = con.continue;
+    console.log(condition);
   
-  // }
+  }
   }
   
 }
-  async function cont() {
-    const con = await inquirer.prompt({
-      name:"continue",
-      type:"confirm",
-      message:"Do you wnat to continue",
-      default:"false",
-    },);
-    return con.continue  
+//   async function cont() {
+//     const con = await inquirer.prompt({
+//       name:"continue",
+//       type:"confirm",
+//       message:"Do you wnat to continue",
+//       default:"false",
+//     },);
+//     return con.continue  
   
-  }
+//   }
   
-  await cont();
-}
+//   await cont();
+// }

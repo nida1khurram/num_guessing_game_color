@@ -61,25 +61,25 @@ while (condition) {
         else {
             spinner.error({ text: ` Game over, you lose ${playerName}!` });
             // process.exit(1);
-            //   let con = await inquirer.prompt({
-            //     name: "continue",
-            //     type: "confirm",
-            //     message: "Do you wnat to continue",
-            //     default: "false",
-            //   });
-            //   condition = con.continue;
-            //   console.log(condition);
-            // }
+            let con = await inquirer.prompt({
+                name: "continue",
+                type: "confirm",
+                message: "Do you wnat to continue",
+                default: "false",
+            });
+            condition = con.continue;
+            console.log(condition);
         }
     }
-    async function cont() {
-        const con = await inquirer.prompt({
-            name: "continue",
-            type: "confirm",
-            message: "Do you wnat to continue",
-            default: "false",
-        });
-        return con.continue;
-    }
-    await cont();
 }
+//   async function cont() {
+//     const con = await inquirer.prompt({
+//       name:"continue",
+//       type:"confirm",
+//       message:"Do you wnat to continue",
+//       default:"false",
+//     },);
+//     return con.continue  
+//   }
+//   await cont();
+// }
